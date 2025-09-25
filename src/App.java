@@ -12,8 +12,7 @@ public class App {
  public static final String WHITE = "\033[0;37m";   // WHITE
 
     public static void main(String[] args) throws Exception {
-        System.out.println("\u001b[0m");
-        String si = "\u001b[33mSI\u001b[0m";
+        String si = "SI";
         String lm = "LM";
         String sos = "SOS";
         String bdato = "BDATO";
@@ -22,8 +21,12 @@ public class App {
         String dig = "DIG";
         String ed = "ED";
 
-        System.out.printf("%-20s%-20s%-20s%-20s%-20s%n", "LUNES", "MARTES", "MIÉRCOLES", "JUEVES", "VIERNES");
-        System.out.printf("%-20s%-20s%-20s%-20s%-20s%n", si, prog, si, ipe1, bdato);
-
+        System.out.printf(RESET+"%-20s%-20s%-20s%-20s%-20s%n", "LUNES", "MARTES", "MIÉRCOLES", "JUEVES", "VIERNES"+RESET);
+        System.out.printf(RED+"%-20s"+GREEN+"%-20s"+RED+"%-20s"+YELLOW+"%-20s"+BLUE+"%-20s%n", si, prog, si, ipe1, bdato);
+        System.out.printf(RED+"%-20s"+GREEN+"%-20s"+RED+"%-20s"+YELLOW+"%-20s"+BLUE+"%-20s%n", si, prog, si, ipe1, bdato);
+        System.out.printf(PURPLE+"%-20s"+GREEN+"%-20s"+YELLOW+"%-20s"+GREEN+"%-20s"+RED+"%-20s%n", lm, prog, ipe1, prog, si);
+        System.out.printf(PURPLE+"%-20s"+BLUE+"%-20s"+WHITE+"%-20s"+GREEN+"%-20s"+CYAN+"%-20s%n", lm, bdato, dig, prog, ed);
+        System.out.printf(BLUE+"%-20s"+BLUE+"%-20s"+GREEN+"%-20s"+GREEN+"%-20s"+CYAN+"%-20s%n", bdato, bdato, prog, prog, ed);
+        System.out.printf(BLUE+"%-20s"+BLACK+"%-20s"+GREEN+"%-20s"+PURPLE+"%-20s"+CYAN+"%-20s%n"+RESET, bdato, sos, prog, lm, ed);
     }
 }
